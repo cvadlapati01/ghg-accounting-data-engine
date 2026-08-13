@@ -1,0 +1,13 @@
+activity_id,entity_id,reporting_year,scope,category,activity_type,quantity,unit,source,data_quality,is_estimated
+ACT-001,ACME-DE,2025,1,stationary_combustion,natural_gas,50000,kWh,utility_invoice,high,false
+ACT-002,ACME-DE,2025,1,mobile_combustion,diesel,12000,L,fuel_report,high,false
+ACT-003,ACME-DE,2025,2,purchased_electricity,electricity,100000,kWh,utility_invoice,high,false
+ACT-004,ACME-DE,2025,3,purchased_goods_and_services,purchased_goods,250000,EUR,erp_spend_export,medium,true
+ACT-005,ACME-DE,2025,3,business_travel,air_travel,180000,passenger_km,travel_platform,medium,false
+ACT-006,ACME-UK,2025,1,stationary_combustion,natural_gas,30000,kWh,utility_invoice,high,false
+ACT-007,ACME-UK,2025,2,purchased_electricity,electricity,75000,kWh,utility_invoice,high,false
+ACT-008,ACME-UK,2025,3,purchased_goods_and_services,purchased_goods,175000,EUR,erp_spend_export,medium,true
+ACT-009,ACME-UK,2025,3,business_travel,rail_travel,50000,passenger_km,travel_platform,high,false
+ACT-010,ACME-DE,2025,2,purchased_electricity,electricity,-1000,kWh,utility_invoice,low,false
+ACT-011,ACME-DE,2025,2,purchased_electricity,electricity,50000,MWh,utility_invoice,low,false
+ACT-012,ACME-DE,2025,3,business_travel,air_travel,25000,passenger_km,travel_platform,medium,false
