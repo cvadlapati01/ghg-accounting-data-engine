@@ -4,14 +4,6 @@ from typing import Optional
 
 
 @dataclass(frozen=True)
-class Entity:
-    entity_id: str
-    entity_name: str
-    country: str
-    reporting_year: int
-
-
-@dataclass(frozen=True)
 class Activity:
     activity_id: str
     entity_id: str
@@ -58,17 +50,17 @@ class Calculation:
 
 
 @dataclass(frozen=True)
-class ValidationIssue:
-    activity_id: str
-    field: str
-    message: str
-    severity: str = "error"
-
-
-@dataclass(frozen=True)
 class AuditEvent:
     audit_event_id: str
     calculation_id: str
     event_type: str
     timestamp: datetime
     description: str
+
+
+@dataclass(frozen=True)
+class ValidationError:
+    activity_id: str
+    field: str
+    message: str
+    value: Optional[str] = None

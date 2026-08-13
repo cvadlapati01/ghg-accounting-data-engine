@@ -1,25 +1,17 @@
-from typing import Iterable, Optional
-
-from .models import EmissionFactor
+from .models import Activity, EmissionFactor
 
 
-def match_factor(
-    activity_type: str,
-    unit: str,
-    geography: str,
-    factors: Iterable[EmissionFactor],
-) -> Optional[EmissionFactor]:
-    """Return the best available compatible factor using geography first, then GLOBAL."""
-    compatible = [
-        factor
-        for factor in factors
-        if factor.activity_type == activity_type
-        and factor.factor_unit.endswith(f"/{unit}")
+def find_factor(activity: Activity, factors: list[EmissionFactor]) -> EmissionFactor | None:
+    matches = [
+        factor for factor in factors
+        if factor.activity_type == activity.activity_type
+        and factor.geography == _geography_for_activity(activity)
+        and factor.factor_unit == f"kgCO2e/{activity.unit}"
     ]
+    return matches[0] if matches else None
 
-    exact = [factor for factor in compatible if factor.geography == geography]
-    if exact:
-        return exact[0]
 
-    global_factors = [factor for factor in compatible if factor.geography == "GLOBAL"]
-    return global_factors[0] if global_factors else None
+def _geography_for_activity(activity: Activity) -> str:
+    # Geography is supplied through the entity in a production system.
+    # The MVP dataset uses entity prefixes to keep the demo dependency-free.
+    return "US" if activity.entity_id.endswith("US") else "DE"
