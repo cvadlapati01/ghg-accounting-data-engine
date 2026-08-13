@@ -1,0 +1,10 @@
+factor_id,activity_type,factor_value,factor_unit,geography,source,source_year,version,methodology
+EF-001,natural_gas,0.202,kgCO2e/kWh,DE,Demonstration Dataset,2025,1.0,activity_based
+EF-002,diesel,2.68,kgCO2e/L,DE,Demonstration Dataset,2025,1.0,activity_based
+EF-003,electricity,0.35,kgCO2e/kWh,DE,Demonstration Dataset,2025,1.0,location_based
+EF-004,purchased_goods,0.25,kgCO2e/EUR,GLOBAL,Demonstration Dataset,2025,1.0,spend_based
+EF-005,air_travel,0.15,kgCO2e/passenger_km,GLOBAL,Demonstration Dataset,2025,1.0,distance_based
+EF-006,natural_gas,0.184,kgCO2e/kWh,GB,Demonstration Dataset,2025,1.0,activity_based
+EF-007,electricity,0.20,kgCO2e/kWh,GB,Demonstration Dataset,2025,1.0,location_based
+EF-008,purchased_goods,0.25,kgCO2e/EUR,GLOBAL,Demonstration Dataset,2025,1.0,spend_based
+EF-009,rail_travel,0.04,kgCO2e/passenger_km,GLOBAL,Demonstration Dataset,2025,1.0,distance_based
